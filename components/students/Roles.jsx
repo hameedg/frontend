@@ -46,7 +46,7 @@ function Roles() {
         <div className="mt-4 text-black text-[1.125rem] tracking-[-0.015em] leading-[1.875rem] max-w-2xl mx-auto text-center">
           Lots of our grads aren’t 100% sure which role they’d want, while
           others have a very specific idea of what they want to do. Either way -
-          we can help! A core part of our training is to help you figure out
+          we can help! A core part of our training is to helpi you figure out
           which role and startup would suit you best.
         </div>
       </div>
