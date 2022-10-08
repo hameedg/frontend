@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from '../../styles/student.module.css';
+import { Navigation, Pagination, Scrollbar, A11y , EffectCreative } from 'swiper';
+
 import 'swiper/css/effect-creative';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 import 'swiper/css';
-import { Navigation, EffectCreative } from 'swiper';
+
+
 
 function Roles() {
   const roles = [
@@ -14,8 +19,16 @@ function Roles() {
     'Influencer Marketing Specialist',
   ];
 
+  const breakPoints=[
+    {width:1,itemsToShow:1},
+    {width:550,itemsToShow:2},
+    {width:768,itemsToShow:3},
+    {width:1200,itemsToShow:4},
+
+  ]
+
   const [change, setChange] = useState(0);
-  useEffect(() => {}, [change]);
+  useEffect(() => { }, [change]);
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
   return (
@@ -24,7 +37,7 @@ function Roles() {
       data-aos-delay="220"
       className="relative mt-16 py-8 md:py-12"
     >
-      <div className="relative mx-auto max-w-7xl px-4 lg:px-4">
+         <div className="relative mx-auto max-w-7xl px-4 lg:px-4">
         <h2
           className={`font-semibold antialiased text-[30px] tracking-[-1px] leading-[1.3em] md:whitespace-pre-wrap text-black  text-center my-8 mb-2 max-w-2xl mx-auto ${styles.fontGazpacho}  `}
         >
@@ -37,34 +50,39 @@ function Roles() {
           which role and startup would suit you best.
         </div>
       </div>
-      <section className="mx-auto ">
-        <Swiper
-          grabCursor
-          effect="creative"
-          creativeEffect={{
-            prev: {
-              shadow: true,
-              translate: ['-150%', 0, -500],
-            },
-            next: {
-              shadow: true,
-              translate: ['150%', 0, -500],
-            },
-          }}
-          navigation={{
-            prevEl: navigationPrevRef.current,
-            nextEl: navigationNextRef.current,
-          }}
-          onBeforeInit={(swiper) => {
-            swiper.params.navigation.prevEl = navigationPrevRef.current;
-            swiper.params.navigation.nextEl = navigationNextRef.current;
-          }}
-          allowTouchMove={false}
-          loop
-          modules={[Navigation, EffectCreative]}
-          className="mySwiper w-full relative"
-        >
-          <SwiperSlide className="select-none">
+    <Swiper
+      // install Swiper modules
+      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      spaceBetween={50}
+      slidesPerView={1}
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
+      grabCursor
+      effect="creative"
+      creativeEffect={{
+        prev: {
+          shadow: true,
+          translate: ['-150%', 0, -500],
+        },
+        next: {
+          shadow: true,
+          translate: ['150%', 0, -500],
+        },
+      }}
+      navigation={{
+        prevEl: navigationPrevRef.current,
+        nextEl: navigationNextRef.current,
+      }}
+      onBeforeInit={(swiper) => {
+        swiper.params.navigation.prevEl = navigationPrevRef.current;
+        swiper.params.navigation.nextEl = navigationNextRef.current;
+      }}
+      loop
+
+    >
+ <SwiperSlide className="select-none">
             <a className="mb-8 w-full px-4 lg:mb-0">
               <div className="mx-auto mb-2 max-w-5xl h-[400px] rounded-[36px] bg-gray-100 p-10">
                 <h5
@@ -163,12 +181,13 @@ function Roles() {
             </a>
           </SwiperSlide>
 
+        
           <div
             onClick={() =>
               setChange(change <= 0 ? roles.length - 1 : change - 1)
             }
             ref={navigationPrevRef}
-            className="absolute top-[175px] left-8 z-10"
+            className="absolute top-[175px] left-8 z-10 cursor-pointer invisible lg:visible"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -187,7 +206,7 @@ function Roles() {
               setChange(change >= roles.length - 1 ? 0 : change + 1)
             }
             ref={navigationNextRef}
-            className="absolute top-[175px] right-8 z-10"
+            className="absolute top-[175px] right-8 z-10 cursor-pointer invisible lg:visible"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -201,8 +220,7 @@ function Roles() {
               />
             </svg>
           </div>
-        </Swiper>
-      </section>
+    </Swiper>
     </section>
   );
 }

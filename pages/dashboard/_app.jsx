@@ -1,6 +1,6 @@
-import '../styles/globals.css';
-import '../styles/animations.css';
-import '../styles/toast.css';
+import '../../styles/globals.css';
+import '../../styles/animations.css';
+import '../../styles/toast.css';
 
 import { useEffect, useState } from 'react';
 import { Provider, useSelector } from 'react-redux';

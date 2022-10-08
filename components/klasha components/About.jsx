@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../../styles/student.module.css';
 import TypewriterComponent from 'typewriter-effect';
 
-const AboutUs = () => {
+const About = () => {
   return (
     <div className="mt-36 mb-20 max-w-[1320px] flex  items-center justify-center px-4 lg:px-[50px] my-0 mx-auto w-full ">
       <div className="flex flex-col justify-center items-center gap-[80px] sm:gap-[40px] ">
@@ -53,4 +53,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default About;

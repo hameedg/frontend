@@ -1,16 +1,16 @@
 import React from 'react';
-import AboutUs from '../components/klasha components/AboutUs';
+import About from '../components/klasha components/About';
 import Footer from '../components/students/Footer';
 import Navbar from '../components/students/Navbar';
 
-const aboutus = () => {
+const about = () => {
   return (
     <>
       <Navbar />
-      <AboutUs />
+      <About />
       <Footer />
     </>
   );
 };
 
-export default aboutus;
+export default about;
