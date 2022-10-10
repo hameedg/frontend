@@ -3,7 +3,8 @@ import About from '../components/klasha components/About';
 import Footer from '../components/students/Footer';
 import Navbar from '../components/students/Navbar';
 
-const about = () => {
+
+const About = () => {
   return (
     <>
       <Navbar />
@@ -11,6 +12,6 @@ const about = () => {
       <Footer />
     </>
   );
-};
+}
 
-export default about;
+export default About
