@@ -12,10 +12,7 @@
     "export": "next export",
     "heroku-postbuild": "npm run build"
   },
-  "engines": {
-    "npm": "8.11.0",
-    "node": "v16.15.1"
-  },
+
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
