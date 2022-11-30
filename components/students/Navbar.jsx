@@ -32,11 +32,16 @@ const Navbar = () => {
           <div className=" pl-16 lg:flex space-x-4 items-center w-full justify-between hidden">
             <div className="lg:flex space-x-8 items-center justify-start">
               <Link href="/colleges" passHref>
+<<<<<<< HEAD
                 <div className="block text-sm hover:text-[#0dbd8b] text-black cursor-pointer leading-[1.6em] ">
+=======
+                <div className="block text-sm hover:text-[#0dbd8b] text-black cursor-pointer leading-[1.6em] py-[0.5rem] px-[1rem] rounded-[20px] bg-gray-100">
+>>>>>>> c95857156cb6afb30e7487ecd8ba31583aeab91e
                   Colleges
                 </div>
               </Link>
               <Link href="/students" passHref>
+<<<<<<< HEAD
                 <a
                   className={
                     router.pathname === '/students'
@@ -44,11 +49,18 @@ const Navbar = () => {
                       : 'text-black bg-white text-sm rounded-full cursor-pointer block leading-[1.6em] px-3 py-1'
                   }
                 >
+=======
+                <a className="block text-sm hover:text-[#0dbd8b] text-black cursor-pointer leading-[1.6em] py-[0.5rem] px-[1rem] rounded-[20px] bg-gray-100 ">
+>>>>>>> c95857156cb6afb30e7487ecd8ba31583aeab91e
                   Students
                 </a>
               </Link>
               <Link href="/companies" passHref>
+<<<<<<< HEAD
                 <div className="block text-sm hover:text-[#0dbd8b] text-black cursor-pointer leading-[1.6em] ">
+=======
+                <div className="block text-sm hover:text-[#0dbd8b] text-black cursor-pointer leading-[1.6em] py-[0.5rem] px-[1rem] rounded-[20px] bg-gray-100">
+>>>>>>> c95857156cb6afb30e7487ecd8ba31583aeab91e
                   Companies
                 </div>
               </Link>

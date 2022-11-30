@@ -44,7 +44,11 @@ function Footer() {
                 </h3>
                 <ul className="mt-4 space-y-3 md:space-y-4">
                   <li>
+<<<<<<< HEAD
                     <Link href="/aboutus" passHref>
+=======
+                    <Link href="/about" passHref>
+>>>>>>> c95857156cb6afb30e7487ecd8ba31583aeab91e
                       <div className="text-[14px] cursor-pointer leading-5 text-[#1e1928cc] hover:text-[#1e1928] md:text-[16px] md:leading-6 tracking-[-0.006em] md:-[-0.011em] antialiased">
                         About
                       </div>

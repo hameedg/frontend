@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from '../../styles/student.module.css';
+<<<<<<< HEAD
 import 'swiper/css/effect-creative';
 import 'swiper/css/navigation';
 import 'swiper/css';
@@ -8,13 +9,41 @@ import { Navigation, EffectCreative } from 'swiper';
 
 function Roles() {
   const roles = [
+=======
+import { Navigation, Pagination, Scrollbar, A11y , EffectCreative } from 'swiper';
+
+import 'swiper/css/effect-creative';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+import 'swiper/css';
+
+
+
+function Roles() {
+  const roles = [
+    'Something Else?',
+>>>>>>> c95857156cb6afb30e7487ecd8ba31583aeab91e
     "Founder's Associate",
     'Community Manager',
     'Influencer Marketing Specialist',
   ];
 
+<<<<<<< HEAD
   const [change, setChange] = useState(0);
   useEffect(() => {}, [change]);
+=======
+  const breakPoints=[
+    {width:1,itemsToShow:1},
+    {width:550,itemsToShow:2},
+    {width:768,itemsToShow:3},
+    {width:1200,itemsToShow:4},
+
+  ]
+
+  const [change, setChange] = useState(0);
+  useEffect(() => { }, [change]);
+>>>>>>> c95857156cb6afb30e7487ecd8ba31583aeab91e
   const navigationPrevRef = React.useRef(null);
   const navigationNextRef = React.useRef(null);
   return (
@@ -23,7 +52,11 @@ function Roles() {
       data-aos-delay="220"
       className="relative mt-16 py-8 md:py-12"
     >
+<<<<<<< HEAD
       <div className="relative mx-auto max-w-7xl px-4 lg:px-4">
+=======
+         <div className="relative mx-auto max-w-7xl px-4 lg:px-4">
+>>>>>>> c95857156cb6afb30e7487ecd8ba31583aeab91e
         <h2
           className={`font-semibold antialiased text-[30px] tracking-[-1px] leading-[1.3em] md:whitespace-pre-wrap text-black  text-center my-8 mb-2 max-w-2xl mx-auto ${styles.fontGazpacho}  `}
         >
@@ -32,6 +65,7 @@ function Roles() {
         <div className="mt-4 text-black text-[1.125rem] tracking-[-0.015em] leading-[1.875rem] max-w-2xl mx-auto text-center">
           Lots of our grads aren’t 100% sure which role they’d want, while
           others have a very specific idea of what they want to do. Either way -
+<<<<<<< HEAD
           we can help! A core part of our training is to help you figure out
           which role and startup would suit you best.
         </div>
@@ -63,6 +97,67 @@ function Roles() {
           modules={[Navigation, EffectCreative]}
           className="mySwiper w-full relative"
         >
+=======
+          we can help! A core part of our training is to helpi you figure out
+          which role and startup would suit you best.
+        </div>
+      </div>
+    <Swiper
+      // install Swiper modules
+      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      spaceBetween={50}
+      slidesPerView={1}
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
+      grabCursor
+      effect="creative"
+      creativeEffect={{
+        prev: {
+          shadow: true,
+          translate: ['-150%', 0, -500],
+        },
+        next: {
+          shadow: true,
+          translate: ['150%', 0, -500],
+        },
+      }}
+      navigation={{
+        prevEl: navigationPrevRef.current,
+        nextEl: navigationNextRef.current,
+      }}
+      onBeforeInit={(swiper) => {
+        swiper.params.navigation.prevEl = navigationPrevRef.current;
+        swiper.params.navigation.nextEl = navigationNextRef.current;
+      }}
+      loop
+
+    >
+ <SwiperSlide className="select-none">
+            <a className="mb-8 w-full px-4 lg:mb-0">
+              <div className="mx-auto mb-2 max-w-5xl h-[400px] rounded-[36px] bg-gray-100 p-10">
+                <h5
+                  className={`font-bold antialiased text-[30px] tracking-[-1px] leading-[1.3em] md:whitespace-pre-wrap text-black  text-center mb-2 max-w-2xl mx-auto ${styles.fontGazpacho} `}
+                >
+                  Something Else?
+                </h5>
+                <p className="text-black text-[1.125rem] tracking-[-0.015em] leading-[1.875rem] antialiased mb-2">
+                  Whether you are a journalism student or robotics is your
+                  interest or passionate about biotechnology, whatever
+                  background you are from or whatever your interests are, our
+                  platform helps you discover diverse roles. So, you will
+                  definitely find something that suits your passion. You might
+                  even feel surprised about some roles as you have never came
+                  across them till date.
+                </p>
+                <div className="text-[14px] text-center w-[150px] font-medium mx-auto leading-[25px] text-[#f97316] bg-[#f97316] bg-opacity-25 rounded-md mb-2">
+                  Something Else?
+                </div>
+              </div>
+            </a>
+          </SwiperSlide>
+>>>>>>> c95857156cb6afb30e7487ecd8ba31583aeab91e
           <SwiperSlide className="select-none">
             <a className="mb-8 w-full px-4 lg:mb-0">
               <div className="mx-auto mb-2 max-w-5xl h-[400px] rounded-[36px] bg-gray-100 p-10">
@@ -139,12 +234,20 @@ function Roles() {
             </a>
           </SwiperSlide>
 
+<<<<<<< HEAD
+=======
+        
+>>>>>>> c95857156cb6afb30e7487ecd8ba31583aeab91e
           <div
             onClick={() =>
               setChange(change <= 0 ? roles.length - 1 : change - 1)
             }
             ref={navigationPrevRef}
+<<<<<<< HEAD
             className="absolute top-[175px] left-8 z-10"
+=======
+            className="absolute top-[175px] left-8 z-10 cursor-pointer invisible lg:visible"
+>>>>>>> c95857156cb6afb30e7487ecd8ba31583aeab91e
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -163,7 +266,11 @@ function Roles() {
               setChange(change >= roles.length - 1 ? 0 : change + 1)
             }
             ref={navigationNextRef}
+<<<<<<< HEAD
             className="absolute top-[175px] right-8 z-10"
+=======
+            className="absolute top-[175px] right-8 z-10 cursor-pointer invisible lg:visible"
+>>>>>>> c95857156cb6afb30e7487ecd8ba31583aeab91e
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -177,8 +284,12 @@ function Roles() {
               />
             </svg>
           </div>
+<<<<<<< HEAD
         </Swiper>
       </section>
+=======
+    </Swiper>
+>>>>>>> c95857156cb6afb30e7487ecd8ba31583aeab91e
     </section>
   );
 }

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+/* eslint-disable global-require */
+>>>>>>> c95857156cb6afb30e7487ecd8ba31583aeab91e
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable spaced-comment */
 const colors = require('tailwindcss/colors');
@@ -20,6 +24,10 @@ module.exports = {
         3.8: '0.9375rem',
         1.3: '0.3125rem',
         18: '4.5rem',
+<<<<<<< HEAD
+=======
+        2.5: '10px',
+>>>>>>> c95857156cb6afb30e7487ecd8ba31583aeab91e
       },
 
       screens: {
@@ -88,6 +96,12 @@ module.exports = {
         'btn-green-hover': '#daf996',
         'signup-blue': '#1a73e8',
         'focus-cyan': '#48ccac',
+<<<<<<< HEAD
+=======
+
+        'light-grey': '#778699',
+        'collabbi-green': '#01A2A4',
+>>>>>>> c95857156cb6afb30e7487ecd8ba31583aeab91e
         ///////////////////////
         'progress-btn': '#01a3a4',
         'main-container': '#fafafa',
@@ -144,6 +158,10 @@ module.exports = {
 
       maxHeight: {
         85: '21.875rem',
+<<<<<<< HEAD
+=======
+        100: '690px',
+>>>>>>> c95857156cb6afb30e7487ecd8ba31583aeab91e
         /////////////
         // landing-page
         'company-images': '45px',
@@ -180,6 +198,13 @@ module.exports = {
         65: '16.25rem',
         44.2: '11.25rem',
         80.1: '20.938rem',
+<<<<<<< HEAD
+=======
+
+        100: '600px',
+        120: '650px',
+        200: '1000px',
+>>>>>>> c95857156cb6afb30e7487ecd8ba31583aeab91e
         /////////////////
         '36/25': '12%',
         'progress-card-width': '59.825rem',
@@ -201,13 +226,28 @@ module.exports = {
         'demo-width': '52rem',
       },
 
+<<<<<<< HEAD
       borderRadius: {
         '4xl': '50px',
+=======
+      borderRadius: ['hover', 'focus'],
+      outline: {
+        green: ['2px solid #48ccac'],
+      },
+      borderWidth: {
+        1: '1px',
+>>>>>>> c95857156cb6afb30e7487ecd8ba31583aeab91e
       },
 
       height: {
         min: 'min-content',
         '11/12': '91%',
+<<<<<<< HEAD
+=======
+
+        98: '585px',
+        100: '650px',
+>>>>>>> c95857156cb6afb30e7487ecd8ba31583aeab91e
         //////////////
         'vh-80': '80vh',
         'feed-card__image': '5.625rem',
@@ -236,7 +276,14 @@ module.exports = {
         // landing-page
         'desktop-img': 'calc(100vw - 50%)',
       },
+<<<<<<< HEAD
 
+=======
+      opacity: {
+        95: '0.95',
+        85: '0.85',
+      },
+>>>>>>> c95857156cb6afb30e7487ecd8ba31583aeab91e
       backgroundPosition: {
         100: '100%',
       },
@@ -281,6 +328,20 @@ module.exports = {
       },
     },
   },
+<<<<<<< HEAD
   variants: {},
   plugins: [require('tailwind-scrollbar-hide')],
+=======
+  variants: {
+    caretColor: ['dark', 'active'],
+    extend: {
+      fill: ['hover', 'focus'],
+    },
+  },
+  plugins: [
+    require('@graxmonzo/tailwind-caret-color'),
+    require('tailwind-scrollbar-hide'),
+    require('@tailwindcss/line-clamp'),
+  ],
+>>>>>>> c95857156cb6afb30e7487ecd8ba31583aeab91e
 };

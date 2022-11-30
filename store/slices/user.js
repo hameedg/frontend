@@ -1,7 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 export const newUser = createSlice({
+<<<<<<< HEAD
   name: 'user',
+=======
+  name: 'newuser',
+>>>>>>> c95857156cb6afb30e7487ecd8ba31583aeab91e
   initialState: {
     invite: '',
     name: '',
